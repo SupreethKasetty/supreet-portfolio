@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supreeth Kasetty | CGI, 3D Animation & VFX Portfolio">
+    <title>Supreeth Kasetty | CGI & Animation Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="tech-grid"></div>
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Supreeth Kasetty</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Bringing Imagination to Life</h1>
+            <p>3D Animation • CGI Effects • Motion Design</p>
+            <a href="gallery.html" class="btn">View Full Gallery</a>
+        </section>
+    </header>
+
+    <main>
+        <!-- Auto-play Muted Showreel -->
+        <section class="showreel-section">
+            <h2>Latest Showreel</h2>
+            <video id="showreel" autoplay muted loop playsinline poster="images/img.webp" controls>
+                <source src="videos/Strandbeest_Animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Work</h2>
+            <div class="grid">
+
+                <!-- Update these with your actual images -->
+                <div class="card fade-in" data-type="image" data-src="images/Car_Lighting.webp">
+                    <img src="images/Car_Lighting.webp" alt="Car Lighting" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3>Car Lighting</h3>
+                    </div>
+                </div>
+
+                <div class="card fade-in" data-type="image" data-src="images/Product.webp">
+                    <img src="images/Product.webp" alt="Product Render" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3>Product Render</h3>
+                    </div>
+                </div>
+
+                <div class="card fade-in" data-type="image" data-src="images/Office_Space_Render.webp">
+                    <img src="images/Office_Space_Render.webp" alt="Office Space" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3>Office Space</h3>
+                    </div>
+                </div>
+
+                <div class="card fade-in" data-type="image" data-src="images/coffee_shop.webp">
+                    <img src="images/coffee_shop.webp" alt="Coffee Shop" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3>Coffee Shop</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Let's Collaborate</h2>
+            <p class="contact-sub">Have a project in mind? Drop a message below.</p>
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select name="service" required>
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="3d-animation">3D Animation</option>
+                        <option value="cgi-vfx">CGI / VFX</option>
+                        <option value="motion-design">Motion Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn" id="submit-btn">Send Message</button>
+                <p id="form-status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Supreeth Kasetty. Hosted on GitHub Pages.</p>
+        <div class="socials">
+            <a href="#" target="_blank">ArtStation</a>
+            <a href="#" target="_blank">Vimeo</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" aria-label="Close">&times;</span>
+        <div class="lightbox-content"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
