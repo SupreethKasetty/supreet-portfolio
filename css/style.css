@@ -37,6 +37,23 @@ body {
     min-height: 100vh;
 }
 
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section,
+.page-header,
+.featured,
+.capabilities,
+.contact-section,
+.showreel-section,
+.gallery-grid,
+.grid {
+    position: relative;
+    z-index: 1;
+    scroll-margin-top: 110px;
+}
 /* Moving Aurora Orbs */
 .aurora-orb {
     position: fixed;
@@ -120,13 +137,8 @@ video {
 }
 
 header {
-    padding: 1.5rem 5%;
-    background: rgba(3, 3, 5, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 0;
+        position: relative;
 }
 
 nav {
@@ -135,6 +147,13 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 1.5rem 5%;
+        background: rgba(3, 3, 5, 0.8);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 300;
 }
 
 nav ul {
@@ -156,6 +175,11 @@ nav a:hover {
     color: var(--accent);
 }
 
+nav a.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
 nav a::after {
     content: '';
     position: absolute;
@@ -168,6 +192,9 @@ nav a::after {
     transition: transform 0.3s ease;
 }
 
+nav a.logo::after {
+    display: none;
+}
 nav a.active::after,
 nav a:hover::after {
     transform: scaleX(1);
@@ -179,6 +206,13 @@ nav a:hover::after {
     position: relative;
 }
 
+.featured {
+    padding-left: 1.5%;
+}
+
+.featured h2 {
+    margin-left: 0.5rem;
+}
 .hero h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     margin-bottom: 0.8rem;
@@ -196,6 +230,72 @@ nav a:hover::after {
     text-transform: uppercase;
 }
 
+.hero-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+#dynamic-text {
+    font-weight: 700;
+    color: #fff;
+}
+
+#dynamic-text::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 0.35rem;
+    opacity: 0.8;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.capabilities {
+    padding: 2rem 5% 4rem;
+}
+
+.capabilities h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.9rem;
+}
+
+.capabilities-copy {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 720px;
+    margin: 0 auto 2rem;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.pill {
+    padding: 0.75rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.pill:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 212, 255, 0.12);
+    border-color: rgba(0, 212, 255, 0.3);
+}
 .btn {
     display: inline-block;
     padding: 0.9rem 2.5rem;
@@ -232,7 +332,8 @@ nav a:hover::after {
     text-transform: uppercase;
 }
 
-.showreel-section video {
+.showreel-section video,
+.showreel-section .video-hero iframe {
     width: 100%;
     max-width: 1100px;
     border-radius: var(--radius);
@@ -241,6 +342,10 @@ nav a:hover::after {
     background: #000;
 }
 
+.video-hero {
+    display: flex;
+    justify-content: center;
+}
 .page-header {
     text-align: center;
     padding: 3rem 1rem;
@@ -276,7 +381,7 @@ nav a:hover::after {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem 5%;
 }
@@ -513,18 +618,156 @@ footer {
     transform: translateY(0);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 4%;
+    }
+
+    nav {
+        padding: 1.5rem 3%;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .contact-section {
+        padding: 2rem;
+        margin: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        gap: 1rem;
+        padding: 1rem 3%;
+    }
+
+    nav a.logo img {
+        height: 40px;
+    }
+
     nav ul {
         gap: 1rem;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .hero {
-        padding: 5rem 1rem 3rem;
+        padding: 6rem 1rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
     }
 
     .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem 3%;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .showreel-section {
+        padding: 1.5rem 3% 3rem;
+    }
+
+    .capabilities {
+        padding: 1.5rem 3% 3rem;
+    }
+
+    iframe {
+        width: 90vw;
+        height: 50vw;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+            padding: 1rem 2%;
+            justify-content: center;
+        }
+    
+        nav a.logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+    
+        nav a.logo img {
+            height: 35px;
+        }
+    nav ul {
+        width: 100%;
+            justify-content: center;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+    }
+    
+    .hero {
+        padding: 5rem 1rem 3rem;
+    }
+    
+                                .hero h1 {
+                                    font-size: clamp(1.5rem, 3vw, 2.5rem);
+                                }
+    .grid {
+        grid-template-columns: 1fr;
         gap: 1.2rem;
-        padding: 1.5rem 4%;
+        padding: 1.5rem 2%;
+        }
+        
+        .card img {
+            height: 200px;
+        }
+        
+        .showreel-section {
+            padding: 1rem 2% 2rem;
+        }
+        
+        .capabilities {
+            padding: 1.5rem 2% 2rem;
+        }
+        
+        .page-header {
+            padding: 2rem 1rem;
+        }
+        
+        .filters {
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+        
+        .close {
+            font-size: 2rem;
+            top: 1rem;
+            right: 1rem;
+        }
+        
+        iframe {
+            width: 95vw;
+            height: 55vw;
+        }
+        
+        .contact-section {
+            max-width: 100%;
+            padding: 1.5rem;
+            margin: 1.5rem 1rem;
+        }
+        
+        .contact-sub {
+            margin-bottom: 1.5rem;
+        }
+        
+        footer {
+            padding: 2rem 1rem;
     }
 }

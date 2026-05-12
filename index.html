@@ -16,65 +16,43 @@
     <div class="aurora-orb orb-3"></div>
     <header>
         <nav>
-            <a href="index.html" class="logo">Supreeth Kasetty</a>
+            <a href="index.html" class="logo"><img src="logo/logo_KBSS.png" alt="Supreeth Kasetty Logo"></a>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    </header>
+    
+    <main>
         <section class="hero">
             <h1>Bringing Imagination to Life</h1>
-            <p>3D Animation • CGI Effects • Motion Design</p>
+            <p class="hero-subtitle"><span id="dynamic-text">AI-driven VFX</span></p>
             <a href="gallery.html" class="btn">View Full Gallery</a>
         </section>
-    </header>
-
-    <main>
         <!-- Auto-play Muted Showreel -->
         <section class="showreel-section">
             <h2>Latest Showreel</h2>
-            <video id="showreel" autoplay muted loop playsinline poster="images/img.webp" controls>
-                <source src="videos/Strandbeest_Animation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="video-hero">
+                <iframe id="hero-video"
+                    src="https://www.youtube.com/embed/ndNfLKiobcU?rel=0&mute=1&autoplay=1&loop=1&playlist=ndNfLKiobcU"
+                    title="Showreel" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
         </section>
 
         <section class="featured">
             <h2>Featured Work</h2>
-            <div class="grid">
+            <div id="featured-grid" class="grid"></div>
+            </section>
 
-                <!-- Update these with your actual images -->
-                <div class="card fade-in" data-type="image" data-src="images/Car_Lighting.webp">
-                    <img src="images/Car_Lighting.webp" alt="Car Lighting" loading="lazy" decoding="async">
-                    <div class="overlay">
-                        <h3>Car Lighting</h3>
-                    </div>
-                </div>
-
-                <div class="card fade-in" data-type="image" data-src="images/Product.webp">
-                    <img src="images/Product.webp" alt="Product Render" loading="lazy" decoding="async">
-                    <div class="overlay">
-                        <h3>Product Render</h3>
-                    </div>
-                </div>
-
-                <div class="card fade-in" data-type="image" data-src="images/Office_Space_Render.webp">
-                    <img src="images/Office_Space_Render.webp" alt="Office Space" loading="lazy" decoding="async">
-                    <div class="overlay">
-                        <h3>Office Space</h3>
-                    </div>
-                </div>
-
-                <div class="card fade-in" data-type="image" data-src="images/coffee_shop.webp">
-                    <img src="images/coffee_shop.webp" alt="Coffee Shop" loading="lazy" decoding="async">
-                    <div class="overlay">
-                        <h3>Coffee Shop</h3>
-                    </div>
-                </div>
-
-            </div>
+        <section class="capabilities">
+            <h2>AI-powered Creative Stack</h2>
+            <p class="capabilities-copy">From neural stylization to motion design, this portfolio showcases work generated with
+                modern creative tools and AI-enhanced pipelines.</p>
+            <div class="skill-pills" id="skill-pills"></div>
         </section>
+
         <section id="contact" class="contact-section">
             <h2>Let's Collaborate</h2>
             <p class="contact-sub">Have a project in mind? Drop a message below.</p>
@@ -106,9 +84,10 @@
     <footer>
         <p>&copy; <span id="year"></span> Supreeth Kasetty. Hosted on GitHub Pages.</p>
         <div class="socials">
-            <a href="#" target="_blank">ArtStation</a>
-            <a href="#" target="_blank">Vimeo</a>
-            <a href="#" target="_blank">LinkedIn</a>
+            <a href="https://drive.google.com/drive/folders/1z1TQu8itfRYAmCzdXCbPy-0MISvqwr-4?usp=drive_link"
+                target="_blank">OneDrive</a>
+            <a href="https://www.youtube.com/@supreethkashetty" target="_blank">Youtube</a>
+            <a href="https://www.linkedin.com/in/sai-supreeth-kb-707558253" target="_blank">LinkedIn</a>
         </div>
     </footer>
 
