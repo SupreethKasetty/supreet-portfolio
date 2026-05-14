@@ -758,39 +758,43 @@ footer {
         width: 90vw;
         height: 50vw;
     }
-.contact-details-section {
-    padding: 2rem 1rem;
+
+    .contact-details-section {
+        padding: 2rem 1rem;
+    }
+
+    .contact-details-container {
+        gap: 2rem;
+    }
+
+    .contact-details-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .detail-label {
+        font-size: 0.9rem;
+    }
+
+    .contact-details-section a {
+        font-size: 1rem;
+    }
 }
 
-.contact-details-container {
-    gap: 2rem;
-}
-
-.contact-details-section h3 {
-    font-size: 1.5rem;
-}
-
-.detail-label {
-    font-size: 0.9rem;
-}
-
-.contact-details-section a {
-    font-size: 1rem;
-}
-}
 @media (max-width: 600px) {
     nav {
         padding: 1rem 2%;
         justify-content: center;
+    }
+
     nav a.logo {
         width: auto;
         text-align: center;
         margin-bottom: 0.5rem;
-        }
-        
-        nav a.logo img {
+    }
+
+    nav a.logo img {
         max-height: 40px;
-    
+    }
 
     nav ul {
         width: 100%;
@@ -801,8 +805,9 @@ footer {
 
     .hero {
         padding: 5rem 1rem 3rem;
-    
-.hero h1 {
+    }
+
+    .hero h1 {
         font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
 
@@ -810,83 +815,86 @@ footer {
         grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 1.5rem 2%;
-    
+    }
 
     .card img {
         height: 200px;
+    }
+
     .showreel-section {
         padding: 1rem 2% 2rem;
     }
-    
+
     .capabilities {
         padding: 1.5rem 2% 2rem;
     }
-    
+
     .page-header {
         padding: 2rem 1rem;
     }
-    
+
     .filters {
         gap: 0.5rem;
         margin-top: 1rem;
     }
-    
+
     .filter-btn {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
     }
-    
+
     .close {
         font-size: 2rem;
         top: 1rem;
         right: 1rem;
     }
-    
+
     iframe {
         width: 95vw;
         height: 55vw;
     }
-    
+
     .contact-section {
         max-width: 100%;
         padding: 1.5rem;
         margin: 1.5rem 1rem;
     }
-    
+
     .contact-sub {
         margin-bottom: 1.5rem;
     }
 
-        .contact-details-section {
-            padding: 1.5rem 1rem;
-        }
-    
-        .contact-details-section h3 {
-            font-size: 1.3rem;
-            letter-spacing: 1.5px;
-        }
-        .contact-details-section .contact-detail-item {
-            display: grid !important;
-            grid-template-columns: 1fr !important;
-            gap: 0.5rem !important;
-            align-items: center !important;
-            justify-items: center !important;
-            width: 100% !important;
-            margin-bottom: 0.75rem !important;
-        }
-        .contact-details-section .detail-label,
-        .contact-details-section a {
-        font-size: 0.95rem !important;
-            display: block !important;
-            margin: 0 !important;
-            text-align: center !important;
-            white-space: normal !important;
-            width: 100% !important;
+    .contact-details-section {
+        padding: 1.5rem 1rem;
     }
-    
+
+    .contact-details-section h3 {
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-details-section .contact-detail-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .contact-details-section .detail-label {
+        font-size: 0.95rem;
+        margin: 0;
+        text-align: left;
+        white-space: nowrap;
+        color: var(--text-muted);
+    }
+
+    .contact-details-section a {
+        font-size: 0.95rem;
+        display: block;
+        width: 100%;
+        text-align: left;
+        word-break: break-word;
+    }
 }
-        }
-        }
-        }
-        }
-        }
