@@ -649,39 +649,6 @@ iframe {
         min-width: 0;
 }
 
-@media (max-width: 600px) {
-    .contact-details-container {
-        width: 100%;
-        padding: 1rem 1rem;
-    }
-
-    .contact-details-section h3 {
-        font-size: 1.5rem;
-    }
-
-    .contact-detail-item {
-        display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 0.5rem 1rem;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 0.75rem;
-    }
-
-                .detail-label {
-                    display: block;
-        font-size: 1rem;
-        margin: 0;
-            white-space: nowrap;
-            text-align: right;
-        }
-
-                .contact-details-section a {
-        font-size: 1rem;
-            display: block;
-        }
-}
-
 footer {
     text-align: center;
     padding: 3rem 1rem;
@@ -815,12 +782,10 @@ footer {
     nav {
         padding: 1rem 2%;
         justify-content: center;
-        }
-        
-        nav a.logo {
+    nav a.logo {
         width: auto;
         text-align: center;
-            margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
         }
         
         nav a.logo img {
@@ -831,7 +796,7 @@ footer {
         width: 100%;
         justify-content: center;
         gap: 0.8rem;
-            font-size: 0.85rem;
+        font-size: 0.85rem;
     }
 
     .hero {
@@ -846,79 +811,77 @@ footer {
         gap: 1.2rem;
         padding: 1.5rem 2%;
     
+
     .card img {
         height: 200px;
+    .showreel-section {
+        padding: 1rem 2% 2rem;
+    }
+    
+    .capabilities {
+        padding: 1.5rem 2% 2rem;
+    }
+    
+    .page-header {
+        padding: 2rem 1rem;
+    }
+    
+    .filters {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .close {
+        font-size: 2rem;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    iframe {
+        width: 95vw;
+        height: 55vw;
+    }
+    
+    .contact-section {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+    
+    .contact-sub {
+        margin-bottom: 1.5rem;
+    }
+
+        .contact-details-section {
+            padding: 1.5rem 1rem;
         }
-        
-        .showreel-section {
-            padding: 1rem 2% 2rem;
+    
+        .contact-details-section h3 {
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
         }
-        
-        .capabilities {
-            padding: 1.5rem 2% 2rem;
+        .contact-details-section .contact-detail-item {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 0.5rem !important;
+            align-items: center !important;
+            justify-items: center !important;
+            width: 100% !important;
+            margin-bottom: 0.75rem !important;
         }
-        
-        .page-header {
-            padding: 2rem 1rem;
-        }
-        
-        .filters {
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-        }
-        
-        .close {
-            font-size: 2rem;
-            top: 1rem;
-            right: 1rem;
-        }
-        
-        iframe {
-            width: 95vw;
-            height: 55vw;
-        }
-        
-        .contact-section {
-            max-width: 100%;
-            padding: 1.5rem;
-            margin: 1.5rem 1rem;
-        }
-        
-        .contact-sub {
-            margin-bottom: 1.5rem;
-        }
-                .contact-details-section {
-                    padding: 1.5rem 1rem;
-                }
-        
-                .contact-details-section h3 {
-                    font-size: 1.3rem;
-                    letter-spacing: 1.5px;
-                }
-        
-                .contact-detail-item {
-        display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 0.5rem 0.8rem;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 0.75rem;
-        }
-        
-                .detail-label {
-        font-size: 0.95rem;
-            text-align: center;
-        
+        .contact-details-section .detail-label,
         .contact-details-section a {
-                font-size: 0.95rem;
-        display: block;
-            min-width: 0;
-        footer {
-            padding: 2rem 1rem;
+        font-size: 0.95rem !important;
+            display: block !important;
+            margin: 0 !important;
+            text-align: center !important;
+            white-space: normal !important;
+            width: 100% !important;
     }
 }
+
