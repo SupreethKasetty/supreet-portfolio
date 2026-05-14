@@ -13,10 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
     year.textContent = new Date().getFullYear();
 
     const typedWords = [
-        'AI-driven VFX',
-        'Procedural Motion Design',
-        'Immersive CGI Worlds',
-        'Storytelling with Neural Art'
+        'Unreal Engine 5',
+        'Product Design',
+        'Visual Design',
+        'UX/UI Design',
+        '3D Visualization',
+        'Cinematic Animation',
+        'Motion Graphics',
+        'Visual Storytelling',
+        'Interactive Experiences',
+        'Real-time Rendering',
+        'Environment Design',
+        'Hard Surface Modeling',
+        'Procedural FX',
+        'AI-assisted Design',
+        'Creative Direction',
+        'AR Experience Design',
+        'Spatial Design',
+        'Generative Visuals',
+        'Digital Sculpting',
+        'Look Development',
+        'Experience Design',
+        'Design Systems',
+        'Interface Animation',
+        'Virtual Production',
+        'Immersive Media'
     ];
 
     let typeIndex = 0;
@@ -50,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', title: 'Car Lighting', src: 'images/Car_Lighting.webp', thumb: 'images/Car_Lighting.webp' },
         { type: 'image', title: 'Product Render', src: 'images/Product.webp', thumb: 'images/Product.webp' },
         { type: 'image', title: 'Office Space', src: 'images/Office_Space_Render.webp', thumb: 'images/Office_Space_Render.webp' },
-        { type: 'video', title: 'VFX Showcase 1', src: 'https://www.youtube.com/embed/PTtdEXsEbjA?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Showcase 2', src: 'https://www.youtube.com/embed/H1Y6crXG6xs?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Showcase 3', src: 'https://www.youtube.com/embed/8R_kzwme0h8?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' }
+        { type: 'video', title: 'Immersive Media Teaser', description: 'A cinematic teaser for the homepage, blending 3D motion with immersive storytelling.', src: 'https://www.youtube.com/embed/Tth5IKDqm2w?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/Tth5IKDqm2w/hqdefault.jpg' },
+        { type: 'video', title: 'AR Experience Visual', description: 'A compact showcase of interactive AR design and spatial storytelling.', src: 'https://www.youtube.com/embed/lTwkq2GlQuo?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/lTwkq2GlQuo/hqdefault.jpg' },
+        { type: 'video', title: 'Generative Visuals Clip', description: 'A motion-led concept clip highlighting generative visuals and procedural FX.', src: 'https://www.youtube.com/embed/COKWY0otPhI?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/COKWY0otPhI/hqdefault.jpg' }
     ];
 
     const galleryItems = [
@@ -77,42 +98,63 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', title: 'Product', src: 'images/Product.webp', thumb: 'images/Product.webp' },
         { type: 'image', title: 'Perfume Bottle', src: 'images/Purfume_bottel.webp', thumb: 'images/Purfume_bottel.webp' },
         { type: 'image', title: 'Studio House Render', src: 'images/Studio House(Render).webp', thumb: 'images/Studio House(Render).webp' },
-        { type: 'video', title: 'YouTube Showreel', src: 'https://www.youtube.com/embed/ndNfLKiobcU?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Project 1', src: 'https://www.youtube.com/embed/PTtdEXsEbjA?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Project 2', src: 'https://www.youtube.com/embed/H1Y6crXG6xs?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Project 3', src: 'https://www.youtube.com/embed/8R_kzwme0h8?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Project 4', src: 'https://www.youtube.com/embed/pn0WHprJ49M?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' },
-        { type: 'video', title: 'VFX Project 5', src: 'https://www.youtube.com/embed/XpMlDlQ5ajE?autoplay=1&mute=1&rel=0', thumb: 'images/img.webp' }
+        { type: 'video', title: 'Full Showreel', description: 'A full cinematic showreel highlighting VFX, animation, and design craft.', src: 'https://www.youtube.com/embed/ndNfLKiobcU?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/ndNfLKiobcU/hqdefault.jpg' },
+        { type: 'video', title: 'Product Lighting Reel', description: 'A compact reel focused on product lighting, reflections, and mood.', src: 'https://www.youtube.com/embed/PTtdEXsEbjA?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/PTtdEXsEbjA/hqdefault.jpg' },
+        { type: 'video', title: 'Cityscape VFX Sequence', description: 'A cinematic VFX sequence for detailed city environments.', src: 'https://www.youtube.com/embed/H1Y6crXG6xs?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/H1Y6crXG6xs/hqdefault.jpg' },
+        { type: 'video', title: 'Character Motion Study', description: 'A motion-driven character and storytelling study.', src: 'https://www.youtube.com/embed/8R_kzwme0h8?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/8R_kzwme0h8/hqdefault.jpg' },
+        { type: 'video', title: 'VFX Breakdown Clip', description: 'A short breakdown clip demonstrating compositing and FX polish.', src: 'https://www.youtube.com/embed/pn0WHprJ49M?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/pn0WHprJ49M/hqdefault.jpg' },
+        { type: 'video', title: 'Motion Graphics Reel', description: 'A sleek motion graphics reel with rapid transitions and impact.', src: 'https://www.youtube.com/embed/XpMlDlQ5ajE?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/XpMlDlQ5ajE/hqdefault.jpg' },
+        { type: 'video', title: 'Spatial Design Motion', description: 'A brief motion piece showcasing spatial design and immersive environments.', src: 'https://www.youtube.com/embed/-483q6MwXtc?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/-483q6MwXtc/hqdefault.jpg' },
+        { type: 'video', title: 'Real-time Rendering Demo', description: 'A fast-paced demo of real-time rendering workflows and engine-driven visuals.', src: 'https://www.youtube.com/embed/l9lITD8up1g?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/l9lITD8up1g/hqdefault.jpg' },
+        { type: 'video', title: 'Virtual Production Short', description: 'A short highlight of virtual production techniques and cinematic staging.', src: 'https://www.youtube.com/embed/umGfRS5m4_Y?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/umGfRS5m4_Y/hqdefault.jpg' },
+        { type: 'video', title: 'Cinematic Animation Scene', description: 'A cinematic scene emphasizing animation, camera movement, and storytelling.', src: 'https://www.youtube.com/embed/HB2a4guXeik?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/HB2a4guXeik/hqdefault.jpg' },
+        { type: 'video', title: 'Interactive Experiences Preview', description: 'A preview of interactive experience design with engaging motion and visual cues.', src: 'https://www.youtube.com/embed/ODO3ws1gvY4?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/ODO3ws1gvY4/hqdefault.jpg' },
+        { type: 'video', title: 'Digital Sculpting Process', description: 'A behind-the-scenes look at digital sculpting and form development.', src: 'https://www.youtube.com/embed/pfu0t38RFM8?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/pfu0t38RFM8/hqdefault.jpg' },
+        { type: 'video', title: 'Design Motion Study', description: 'A motion-driven study for interface animation and visual systems.', src: 'https://www.youtube.com/embed/W8Owi0UNLT0?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/W8Owi0UNLT0/hqdefault.jpg' },
+        { type: 'video', title: 'Augmented Reality Preview', description: 'A short conceptual clip for AR experience design and spatial interaction.', src: 'https://www.youtube.com/embed/SuUzOUsRFqM?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/SuUzOUsRFqM/hqdefault.jpg' },
+        { type: 'video', title: 'Experience Design Snapshot', description: 'A snapshot of modern experience design with cinematic and digital references.', src: 'https://www.youtube.com/embed/8_1iQsVpdoI?autoplay=1&mute=1&rel=0', thumb: 'https://img.youtube.com/vi/8_1iQsVpdoI/hqdefault.jpg' }
     ];
 
     const skills = [
-        'Blender & Cinema 4D',
-        'AI-assisted Lighting',
-        'Procedural FX',
+        'Unreal Engine 5',
+        'Product Design',
+        'Visual Design',
+        'UX/UI Design',
+        '3D Visualization',
+        'Cinematic Animation',
         'Motion Graphics',
-        'Neural Stylization',
-        'Interactive Storytelling'
+        'Visual Storytelling',
+        'Interactive Experiences',
+        'Real-time Rendering',
+        'Environment Design',
+        'Hard Surface Modeling',
+        'Procedural FX',
+        'AI-assisted Design',
+        'Creative Direction',
+        'AR Experience Design',
+        'Spatial Design',
+        'Generative Visuals',
+        'Digital Sculpting',
+        'Look Development',
+        'Experience Design',
+        'Design Systems',
+        'Interface Animation',
+        'Virtual Production',
+        'Immersive Media'
     ];
 
     const createCard = (item) => {
-        if (item.type === 'image') {
-            return `
-                <div class="card fade-in" data-type="image" data-src="${item.src}">
-                    <img src="${item.thumb}" alt="${item.title}" loading="lazy" decoding="async">
-                    <div class="overlay">
-                        <h3>${item.title}</h3>
-                    </div>
-                </div>`;
-        }
-
         return `
-            <div class="card fade-in" data-type="video" data-src="${item.src}">
+            <div class="card fade-in" data-type="${item.type}" data-src="${item.src}">
+                <img src="${item.thumb}" alt="${item.title}" loading="lazy" decoding="async">
+                ${item.type === 'video' ? `
                 <div class="video-placeholder">
                     <span>▶</span>
                     <p>${item.title}</p>
-                </div>
+                </div>` : ''}
                 <div class="overlay">
                     <h3>${item.title}</h3>
+                    ${item.description ? `<p>${item.description}</p>` : ''}
                 </div>
             </div>`;
     };
